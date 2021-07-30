@@ -13,18 +13,22 @@
         }
         .box{
             width: 1000px;
-            background: lemonchiffon;
+            /* background: lemonchiffon; */
             margin: 0 auto;
         }
         .box1{
-            width: 200px;height: 40px;
-            background: palegreen;
+            width: 400px;height: 400px;
+            background: rgb(220, 252, 220);
             float: left;
+            text-align: center;
+            line-height: 400px;
         }
         .box2{
-            width: 200px;height: 40px;
+            width: 600px;height: 400px;
             background: paleturquoise;
             float: right;
+            text-align: center;
+            line-height: 400px;
         }
         .nav>ul>li{
             float: left;
@@ -38,13 +42,16 @@
             margin: 0 auto;
         }
         .nav h1{text-align: center;}
+        .box3{
+            width: 1000px;height: 150px;
+            background: palegoldenrod;
+            text-align: center;
+            float: left;
+            line-height: 150px;
+        }
     </style>
     </head>
 <body>
-    <div class="box clearfix">
-        <div class="box1">left</div>
-        <div class="box2">right</div>
-    </div>
     <div class="nav">
         <h1>logo</h1>
         <ul>
@@ -54,6 +61,11 @@
             <li>menu4</li>
             <li>menu5</li>
         </ul>
+    </div>
+    <div class="box clearfix">
+        <div class="box1">aside</div>
+        <div class="box2">content</div>
+        <div class="box3">footer</div>
     </div>
 </body>
 </html>
