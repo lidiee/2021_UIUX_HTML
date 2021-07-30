@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float2</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        li{list-style: none;}
+        .clearfix::after{
+            content: "";clear: both;display: block;
+        }
+        .box{
+            width: 1000px;
+            background: lemonchiffon;
+            margin: 0 auto;
+        }
+        .box1{
+            width: 200px;height: 40px;
+            background: palegreen;
+            float: left;
+        }
+        .box2{
+            width: 200px;height: 40px;
+            background: paleturquoise;
+            float: right;
+        }
+        .nav>ul>li{
+            float: left;
+            width: 200px;text-align: center;
+            height: 40px;line-height: 40px;
+            background: pink;
+            }
+        .nav>ul>li:hover{background-color: skyblue;}
+        .nav{
+            width: 1000px;
+            margin: 0 auto;
+        }
+        .nav h1{text-align: center;}
+    </style>
+    </head>
+<body>
+    <div class="box clearfix">
+        <div class="box1">left</div>
+        <div class="box2">right</div>
+    </div>
+    <div class="nav">
+        <h1>logo</h1>
+        <ul>
+            <li>menu1</li>
+            <li>menu2</li>
+            <li>menu3</li>
+            <li>menu4</li>
+            <li>menu5</li>
+        </ul>
+    </div>
+</body>
+</html>
