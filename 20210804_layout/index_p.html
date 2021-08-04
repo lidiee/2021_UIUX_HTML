@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        /* header */
+        #header{
+            width: 1000px;
+            background-color: white;
+            margin: 0 auto;
+            padding-top: 10px;
+        }
+        #header h1{
+            width: 300px;height: 100px;
+            margin: 0 auto;
+            margin-bottom: 10px;
+        }
+        #header>h1>a{
+            display: block;
+            text-align: center;
+            line-height: 100px;
+            color: #0F346C;
+        }
+        #header>nav.gnb>ul>li{
+            float: left;
+            width: 20%;
+        }
+        #header>nav.gnb>ul>li>a{
+            display: block;
+            text-align: center;
+            line-height: 40px;
+        }
+        #header>nav.gnb>ul>li>a:hover{
+            color:white;
+            background-color: royalblue;
+        }
+
+        /* visual */
+        .visual{
+            background-color: powderblue;
+            padding: 20px 0;
+            margin-bottom: 20px;
+        }
+        .container{
+            width: 1000px;height: 300px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .container>div{
+            position: absolute;
+        }
+        .container>div.box1{
+            width: 400px;height: 150px;
+            background-color: steelblue;
+            top: 50%; margin-top: -75px;
+        }
+        .container>div.box2{
+            width: 130px;height: 34px;
+            background: #F26226;
+            position: absolute;
+            right: 50%;margin-right: -100px;
+            top: 80%;
+        }
+
+        /* section */
+        .section{
+            width: 1000px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+        .section li{
+            float: left;width: 316.666px;
+            margin-right: 25px;
+        }
+        .section li:last-child{margin-right: 0;}
+        .section img{width: 100%; display: block;}
+        .section h3{
+            text-align: center;
+        }
+        .section h3:after{
+            content: ""; width: 60px; height: 2px;
+            background-color: black;
+            display: block;
+            margin: 8px auto;
+        }
+        .section p{
+            text-align: center;
+            margin-bottom: 2px;
+        }
+    </style>
+</head>
+<body>
+    <!-- header start -->
+    <header id="header">
+        <h1><a href="#">BLUE APRON</a></h1>
+        <nav class="gnb">
+            <ul>
+                <li><a href="#">ON THE MENU</a></li>
+                <li><a href="#">PRICING</a></li>
+                <li><a href="#">WINE</a></li>
+                <li><a href="#">GIFTS</a></li>
+                <li><a href="#">MARKET</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- header end -->
+
+    <!-- visual area start -->
+    <div class="visual">
+        <div class="container">
+            <div class="box1"></div>
+            <div class="box2"></div>
+        </div>
+    </div>
+    <!-- visual area end -->
+
+    <!-- selection area start -->
+    <section class="section">
+        <h3>ON THE MENU</h3>
+        <P>Lorem ipsum dolor sit amet.</P>
+        <ul class="clearfix">
+            <li><img src="../images/testimg.jpg" alt=""></li>
+            <li><img src="../images/testimg.jpg" alt=""></li>
+            <li><img src="../images/testimg.jpg" alt=""></li>
+        </ul>
+    </section>
+    <div>
+        <section class="section1">
+            <ul class="clearfix">
+                <li><img src="../images/testimg.jpg" alt=""></li>
+                <li><img src="../images/testimg.jpg" alt=""></li>
+                <li><img src="../images/testimg.jpg" alt=""></li>
+            </ul>
+        </section>
+    </div>
+    <section class="section2">
+        <h3>PRICING</h3>
+        <ul class="clearfix">
+            <li><img src="../images/testimg.jpg" alt=""></li>
+            <li><img src="../images/testimg.jpg" alt=""></li>
+            <li><img src="../images/testimg.jpg" alt=""></li>
+            <li><img src="../images/testimg.jpg" alt=""></li>
+        </ul>
+    </section>
+    <!-- selection area end -->
+
+    <!-- footer area start -->
+    <footer id="footer">
+        <div class="footer">
+            <h2>BLUE APRON</h2>
+            <address>
+                If you are using a screen reader and are having problems using this website, <br> please call 1-844-462-8599 for assistance.
+            </address>
+        </div>
+    </footer>
+    <!-- footer area end -->
+</body>
+</html>
