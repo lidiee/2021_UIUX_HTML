@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .box{
+            width: 400px;height: 400px;
+            background-color: lightblue;
+            margin: 0 auto;position: relative;
+        }
+        .box>div{
+            width: 100px;height: 100px;
+            position: absolute;
+        }
+        .box1{background-color: lightyellow;right: 0;}
+        .box2{background-color: lightpink;right: 0;bottom: 0;}
+        .box3{background-color: lightgreen;bottom: 0;}
+        .box4{background-color: lightcyan;}
+
+
+        .tbox{
+            width: 1000px;height: 200px;
+            background-color: lightgrey;
+            margin: 0 auto; margin-top: 20px;
+            position: relative;
+            text-align: center;
+        }
+        .tbox>div{position: absolute;line-height: 100px;}
+        .tbox1{
+            width: 300px;height: 100px;
+            background-color: blanchedalmond;
+        }
+        .tbox2{
+            width: 150px;height: 100px;
+            background-color: palegoldenrod;
+            right: 0;
+        }
+        .tbox3{
+            width: 100%;height: 40px;
+            background-color: lemonchiffon;
+            bottom: 0;
+            line-height: 40px !important;
+        }
+
+
+        header#header{
+            width: 1000px;height: 100px;
+            background-color: aliceblue;
+            margin: 0 auto; margin-top: 20px;
+            position: relative;
+        }
+        header#header>h1{
+            width: 100px;height: 100px;
+            background-color: antiquewhite;
+        }
+        #header>h1>a{
+            display: block;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .util{
+            width: 200px;height: 40px;
+            background-color: wheat;
+            position: absolute;
+            right: 0; top: 0;
+        }
+        .gnb{
+            width: 600px;height: 50px;
+            background-color: bisque;
+            position: absolute;
+            right: 0;bottom: 0;
+        }
+
+        .gnb>ul>li{
+            float: left;
+            width: 25%
+        }
+        .gnb>ul>li>a{
+            display: block;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+    </div>
+
+
+    <div class="tbox">
+        <div class="tbox1"></div>
+        <div class="tbox2"></div>
+        <div class="tbox3"></div>
+    </div>
+
+    <header id="header">
+        <h1><a href="#">LOGO</a></h1>
+        <div class="util">
+            util
+        </div>
+        <nav class="gnb">
+            <ul class="clearfix">
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+                <li><a href="#">menu4</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>
