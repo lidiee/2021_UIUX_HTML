@@ -1,0 +1,118 @@
+@charset "utf-8";
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+/* header */
+#header>.topWrap{border-bottom: 1px solid #dddddd;}
+#header>.topWrap >.top{
+    width: 980px;
+    margin: 0 auto;
+    _background-color: blanchedalmond;
+}
+nav.util{
+    _background-color: burlywood;
+    float: right;
+}
+nav.util>ul>li{
+    float: left;
+}
+nav.util>ul>li>a{
+    display: block;
+    text-align: center;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 10px;
+    color: #888888;
+    font-size: 14px;
+    position: relative;
+}
+nav.util>ul>li>a::after{
+    content: ""; width: 1px;height: 10px;
+    display: block;
+    background-color: #c4c4c4;
+    position: absolute;
+    top: 7px; right: 0;
+}
+nav.util>ul>li:last-child>a::after{content: "";display: none;}
+
+
+.logoWrap{
+    width: 980px;
+    margin: 0 auto;
+    _background-color: #ccc;
+}
+.logoWrap>h1{
+    width: 200px;
+    margin: 0 auto;
+}
+.logoWrap>h1>a{
+    display: block;
+    text-align: center;
+    line-height: 75px;
+}
+
+
+.navWrap{
+    background-color: #1D5DA4;
+}
+.navWrap>.gnb{
+    width: 980px;
+    margin: 0 auto;
+}
+.navWrap>.gnb li{
+    float: left;
+    width: calc(980px / 6);
+    border-right: 1px solid #336DAC;
+}
+.navWrap>.gnb li:first-child{
+    border-left: 1px solid #336DAC;
+}
+.navWrap>.gnb a{
+    display: block;
+    text-align: center;
+    line-height: 45px;
+    color: white;
+    font-weight: bold;
+}
+.navWrap>.gnb a:hover{
+    background-color: steelblue;
+}
+
+/* visual */
+.visualWrap{
+    height: 400px;
+    overflow: hidden;
+    background-image: url(../images/visualbg01.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #203b6a;
+    }
+.visualWrap>.visual{
+    width: 980px;height: 400px;
+    position: relative;
+    margin: 0 auto;
+}
+.visualWrap>.visual>.visualText{
+    position: absolute;
+    top: 50%;margin-top: -137px;
+    font-size: 75px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 87.89px;
+    letter-spacing: 0.355em;
+    color: white;
+}
+.visualWrap>.visual>img{
+    position: absolute;
+    right: 0; top: 20px;
+}
+.visualWrap>.visual>.visualText>p{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    padding: 34px 0;
+}
