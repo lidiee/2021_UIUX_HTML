@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{list-style: none;}
+
+        table{width: 1200px; border-collapse: collapse; margin-bottom: 5px;}
+        .info th{border: 1px solid #000; padding: 15px 0;}
+        .info .nm th{width: 20%; text-align: center;}
+        .info .nm th:nth-child(2n){background: #ddd;}
+        .info .nm th:first-child{width: calc(1200px / 18);}
+        .info .nm th:last-child{background: white; width: 15%;}
+        .info .pi th:nth-child(2n-1){background-color: #ddd;}
+        .info .num th:nth-child(2n-1){background-color: #ddd;}
+        .info .adrs th:first-child{background-color: #ddd;}
+
+        .etc th{border: 1px solid #000;}
+        .etc .sch th{width: calc(1200px / 6); text-align: center; padding: 15px 0;}
+        .etc .sch th:nth-child(2n-1){background-color: #ddd;}
+        
+        .route th,.route td{border: 1px solid #000;}
+        .route .rt{}
+    </style>
+</head>
+<body>
+    <table class="info">
+        <tr class="nm">
+            <th rowspan="6">인적<br>사항</th>
+            <th>성&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;명</th>
+            <th></th>
+            <th>학&nbsp;&nbsp;&nbsp;&nbsp;교&nbsp;&nbsp;&nbsp;&nbsp;명</th>
+            <th></th>
+            <th rowspan="6">사진첨부</th>
+        </tr>
+        <tr class="pi">
+            <th>주민등록번호</th>
+            <th></th>
+            <th>E&nbsp;-&nbsp;mail</th>
+            <th></th>
+        </tr>
+        <tr class="num">
+            <th>휴&nbsp;&nbsp;&nbsp;&nbsp;대&nbsp;&nbsp;&nbsp;&nbsp;폰</th>
+            <th></th>
+            <th>긴급 연락처<br>(학부모)</th>
+            <th></th>
+        </tr>
+        <tr class="adrs">
+            <th>주&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;소</th>
+            <th colspan="3"></th>
+        </tr>
+    </table>
+    <table class="etc">
+        <tr class="sch">
+            <th>추천교사명</th>
+            <th></th>
+            <th>연락처</th>
+            <th></th>
+            <th>학교연락처</th>
+            <th></th>
+        </tr>
+    </table>
+    <table class="route">
+        <tr class="rt">
+            <th>인지<br>경로</th>
+            <th>본교를 알게된 경로는<br>(중복응답가능)</th>
+            <th>
+                <ul>
+                    <li></li>
+                </ul>
+            </th>
+        </tr>
+    </table>
+</body>
+</html>

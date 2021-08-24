@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>naver register</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrap">
+        <header id="header">
+            <h1><a href="#">NAVER</a></h1>
+        </header>
+        <div id="content">
+            <h2 class="blind">SIGN UP</h2>
+            <div class="join">
+                <form action="#" method="GET">
+                    <fieldset>
+                        <legend class="blind">ID/PASSWORD</legend>
+                        <p class="field">
+                            <label for="user-id" class="blind">ID</label>
+                            <input type="text" id="user-id" name="userID" placeholder="Username" class="inp-field">
+                            <span class="icon email">@naver.com</span>
+                        </p>
+                        <p class="field">
+                            <label for="user-pw" class="blind">PASSWORD</label>
+                            <input type="password" id="user-pw" name="password" placeholder="Password" class="inp-field">
+                            <span class="icon pw">password</span>
+                        </p>
+                        <p class="field none">
+                            <label for="user-pwc" class="blind">PASSWORD CONFIRM</label>
+                            <input type="password-confirm" id="user-pwc" name="password-confirm" placeholder="Password Confirm" class="inp-field">
+                            <span class="icon pwc">password-confirm</span>
+                        </p>
+                    </fieldset>
+                    <fieldset>
+                        <legend class="blind">Personal Information</legend>
+                        <p class="field">
+                            <label for="user-name" class="blind">Name</label>
+                            <input type="text" id="user-name" placeholder="Name" class="inp-field w458">
+                        </p>
+                        <p class="field radio">
+                            <input type="radio" id="male" name="user-g" value="male" checked>
+                            <input type="radio" id="female" name="user-g" value="female">
+
+                            <label for="male" class="btn-label male">Male</label>
+                            <label for="female" class="btn-label female">Female</label>
+                        </p>
+                        <p class="field birth clearfix">
+                            <label for="user-birth">DOB</label>
+                            <input type="text" id="user-birth" name="year" placeholder="Year(4dgt)" class="inp-field w130">
+                            <span class="field-wall">｜</span>
+                            <select name="month">
+                                <option value="default">Month</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                            <span class="field-wall">｜</span>
+                            <input type="text" name="day" placeholder="Day" class="inp-field w145">
+                        </p>
+                        <p class="field">
+                            <label for="user-mail" class="blind">Recovery Email</label>
+                            <input type="text" id="user-mail" placeholder="Recovery E-mail(Optional)" class="inp-field w458">
+                        </p>
+                    </fieldset>
+                    <fieldset>
+                        <legend class="blind">verification code</legend>
+                        <p class="field confirm clearfix">
+                            <label for="user-num" class="blind">Send Code</label>
+                            <select name="usernum" id="user-num">
+                                <option value="082">+082</option>
+                            </select>
+                            <span class="field-wall">｜</span>
+                            <input type="text" placeholder="Phone Number" name="user-phone" class="inp-field w202">
+                            <button type="button" class="btn-click">Send Code</button>
+                        </p>
+                        <p class="field confirm">
+                            <label for="user-confirm" class="blind">entervcode</label>
+                            <input type="text" id="users-confirm" name="userconfirm" placeholder="Verification Code" class="inp-field w303">
+                            <button type="button" class="btn-click">Confirm</button>
+                        </p>
+                    </fieldset>
+                    <input type="submit" value="Sign Up" class="btn-submit">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>  

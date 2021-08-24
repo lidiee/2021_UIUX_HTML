@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float menu</title>
+    <style>
+        /* reset */
+        * {margin: 0;padding: 0;}
+        li{list-style: none;}
+        .clearfix::after{content: ""; clear: both;display: block;}
+        a:link, a:visited{text-decoration: none; color:black}
+
+        /* nav */
+        .nav{
+            width: 1000px;background-color: lemonchiffon;
+            margin: 0 auto;
+        }
+        .nav>ul>li{
+            float: left;width: 16.66%
+        }
+        .nav>ul>li>a{
+            display: block;
+            text-align:center;
+            height: 40px;
+            line-height: 40px;
+        }
+        /* 1. a inlin tag -> block  2. text align centre  3. line height */
+        .nav>ul>li>a:hover{color: white;background-color: paleturquoise;}
+        /* hover : change colour of text and background */
+    </style>                                     
+</head>
+<body>
+    <!-- .nav>ul>li*6>a[href="#"]>{menu$} -->
+    <div class="nav">
+        <ul class="clearfix">
+            <li><a href="#">menu1</a></li>
+            <li><a href="#">menu2</a></li>
+            <li><a href="#">menu3</a></li>
+            <li><a href="#">menu4</a></li>
+            <li><a href="#">menu5</a></li>
+            <li><a href="#">menu6</a></li>
+        </ul>
+    </div>
+</body>
+</html>

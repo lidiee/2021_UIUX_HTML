@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* .box{width: 200px;height: 200px;float: left;}
+.box:nth-child(1){background-color: blanchedalmond;}
+.box:nth-child(2){background-color: palegoldenrod;margin-left: -6px;}
+.box:nth-child(3){background-color: lemonchiffon;margin-left: -6px;} */
+
+body{background-image: url(../../images/bg_grid.gif);}
+.box1,.box2,.box3,.box4{width: 200px;height: 200px;}
+.box1{
+    background-color: blanchedalmond;
+    position: absolute;right: 0px;
+}
+.box2{
+    background-color: palegoldenrod;
+    position: absolute;right: 0px;bottom: 0;
+}
+.box3{
+    background-color: lemonchiffon;
+    position: absolute;left: 0px;top: 0;
+    z-index: 1;
+}
+.box4{
+    background-color: burlywood;
+    position: absolute;left: 0;bottom: 0;
+}

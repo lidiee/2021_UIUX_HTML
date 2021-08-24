@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        .inp{
+            border: 0 none;
+            padding: 10px; font-size: 18px;line-height: 24px;
+        }
+        .underline{border-bottom: 1px solid #000;}
+        .round{
+            border: 3px solid #999;
+            border-radius: 25px; text-indent: 10px;
+        }
+        .box1{
+            width: 270px;border: 3px solid#999;
+            padding: 10px;font-size: 18px;
+        }
+        input[type="submit"]{
+            border: 0 none;
+            background-color: blanchedalmond;
+            width: 50px;height: 50px;
+            border-radius: 50%;
+            position: absolute;
+            top: 45.5px;
+            left: 250px;
+            cursor: pointer;
+        }
+        .radio>input:nth-of-type(1):checked~label.male{background-color: mistyrose;}
+        .radio>input:nth-of-type(2):checked~label.female{background-color: lemonchiffon;}
+    </style>
+</head>
+<body>
+    <div class="box">
+        <form action="test.php" method="post">
+            <label for="user-name">Name</label>
+            <input type="text" name="username" id="user-name" class="inp underline" placeholder="Name">
+
+            <br>
+            <label for="user-name1">Name</label>
+            <input type="text" name="username1" id="user-name1" class="inp round">
+
+            <br>
+
+            <div class="radio">
+                <input type="radio" id="radio1st" name="gender" value="m" checked>
+                <input type="radio" id="radio2nd" name="gender" value="f">
+                <label for="radio1st" class="male">Male</label>
+                <label for="radio2nd" class="female">Female</label>
+            </div>
+
+            <input type="submit" value="Submit">
+
+        </form>
+
+        <div class="box1">Test</div>
+    </div>
+</body>
+</html>

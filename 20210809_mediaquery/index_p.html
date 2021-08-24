@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        .nav{margin: 0 auto; background-color: beige;}
+        .nav li{float: left;border: 1px solid #000;}
+        .nav a{display: block; text-align: center; line-height: 40px;}
+        .nav a:hover{background-color: cadetblue; color: white;}
+
+        @media screen and (max-width:699px){
+            body{background-color: cornflowerblue;}
+            .nav li{width: 100%;}
+            .nav li:nth-child(4){display: none;}
+            .nav li:nth-child(5){display: none;}
+        }
+        @media screen and (min-width:700px) and (max-width:999px){
+            body{background-color: darkcyan;}
+            .nav li{width: 50%;}
+            .nav li:last-child{display: none;}
+        }
+        @media screen and (min-width:1000px){
+            body{background-color: darkturquoise;}
+            .nav{width: 1200px;}
+            .nav li{width: 20%;}
+        }
+    </style>
+</head>
+<body>
+    <ul class="nav clearfix">
+        <li><a href="#">menu</a></li>
+        <li><a href="#">menu</a></li>
+        <li><a href="#">menu</a></li>
+        <li><a href="#">menu</a></li>
+        <li><a href="#">menu</a></li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+
+</head>
+<body>
+    <form action="join.php" method="get">
+        <fieldset>
+            <legend>ID/PASSWORD</legend>
+
+            <label for="id">ID</label>
+            <input type="text" id="id" name="" placeholder="USERNAME" required> <br>
+
+            <label for="pw">PASSWORD</label>
+            <input type="password" id="pw" name="" placeholder="PASSWORD" required>
+
+        </fieldset>
+        <fieldset>
+            <legend>MORE</legend>
+
+            <label for="f">FOOTBALL</label>
+            <input type="checkbox" id="f" name="f" value="football" checked>
+            <label for="b">BASEBALL</label>
+            <input type="checkbox" id="b" name="b" value="baseball"> <br>
+
+            <label for="m">MALE</label>
+            <input type="radio" id="m" name="g" value="male" checked>
+            <label for="fm">FEMALE</label>
+            <input type="radio" id="fm" name="g" value="female"> <br>
+
+            <label for="text">ADDITIONAL TEXT</label> <br>
+            <textarea name="test" id="text" cols="30" rows="10"></textarea><br>
+            <label for="sel">SELECT</label><br>
+            <select name="fruit" id="sel">
+                <option value="apple">APPLE</option>
+                <option value="banana">BANANA</option>
+                <option value="strawberry" selected>STRAWBERRY</option>
+            </select>
+        </fieldset>
+        <input type="submit" value="SUBMIT">
+    </form>
+</body>
+</html>

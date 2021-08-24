@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script>
+        $(document).ready(function(){
+            var myslide = $('.slider').bxSlider({controls:false});
+
+            $('.nextBtn').click(function(){
+                myslide.goToNextSlide(); 
+            });
+            $('.prevBtn').click(function(){
+                myslide.goToPrevSlide(); 
+            });
+        });
+    </script>
+
+    <style>
+        .sliderWrap{position: relative;}
+        .sliderWrap .slider img{width: 100%;min-width: 800px;}
+        .bx-wrapper {
+        -moz-box-shadow: 0 none;
+        -webkit-box-shadow: 0 none;
+        box-shadow: 0 none;
+        border: 0 none;
+        margin-bottom: 0;
+        }
+        .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+        position: absolute;
+        bottom: 30px;
+        width: 100%;
+        }
+
+        .nextBTN,.prevBTN{position: absolute;top: 50%;margin-top: -50px;cursor: pointer;}
+        .nextBTN{right: 0;}
+    </style>
+</head>
+<body>
+    <div class="sliderWrap">
+        <ul class="slider">
+            <li><img src="images/pc01.jpg" alt="p01"></li>
+            <li><img src="images/pc02.jpg" alt="p02"></li>
+            <li><img src="images/pc03.jpg" alt="p03"></li>
+        </ul>
+        <div class="nextBTN">
+            <img src="images/btn_right.png" alt="">
+        </div>
+        <div class="prevBTN">
+            <img src="images/btn_left.png" alt="">
+        </div>
+    </div>
+</body>
+</html>
