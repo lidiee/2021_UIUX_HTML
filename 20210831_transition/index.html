@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        .box1{
+            width: 300px;height: 300px;
+            transition: 300ms;
+            position: relative;
+            overflow: hidden;
+            border: 10px solid lemonchiffon;
+            margin: 0 auto;
+        }
+        .box1:hover{
+            border: 20px solid lemonchiffon;
+        }
+        .box1 img{
+            position: absolute;
+            left: 50%;top: 50%;
+            transform: translate(-50%,-50%) scale(1);
+            transition: 300ms;
+        }
+        .box1:hover img{transform: translate(-50%,-50%) scale(1.2);}
+        .box1 .bg{
+            width: 100%;height: 100%;
+            background-color: black;
+            position: relative;opacity: 0.5;
+        }
+        .box1:hover .bg{opacity: 0;}
+        .box1 .circle{
+            width: 50px;height: 50px;
+            _background-color: lightcoral;
+            position: absolute;
+            left: 50%;top: 50%; transform: translate(-50%,-50%);
+            transition: 300ms;
+            border-radius: 50%;
+            border: 4px solid white;
+        }
+        .box1:hover .circle{transform: translate(-50%,-50%) rotate(90deg);}
+        .circle .bar1,
+        .circle .bar2{
+            width: 30px;height: 4px;background-color: white;
+            border-radius: 2px;
+            position: absolute;
+            left: 50%;top: 50%;
+            transform: translate(-50%,-50%);
+            
+        }
+
+
+        .circle .bar1{transform: translate(-50%,-50%) rotate(90deg);}
+
+        .box2{
+            width: 300px;height: 60px;border: 1px solid #000;
+            padding-left: 20px;padding-right: 20px;
+            position: relative;
+            overflow: hidden; margin: 0 auto;
+        }
+        .box2 .text{line-height: 60px;position: relative;transition: 300ms;}
+        .box2 .bar{
+            width: 2%; height: 60px; background: lightpink;
+            position: absolute;top: 0;left: 0;
+            transition: 300ms;
+        }
+        .box2:hover .bar{width: 100%;}
+        .box2:hover .text{color: white;}
+
+        .box2 .text::before{
+            content: ""; display: block;width: 50px;height: 2px;
+            background-color: black;
+            position: absolute;
+            right: 0; top: 50%; border-radius: 1px;
+            transition: 300ms;
+        }
+        .box2 .text::after{
+            content: ""; display: block; width: 1px;
+            _background-color: black;position: absolute;
+            right: -8px;top: calc(50% - 5px);
+            border-width: 6px;
+            border-color: transparent transparent transparent black;
+            border-style: solid;
+            transition: 300ms;
+        }
+        .box2:hover .text::before{background-color: white;}
+        .box2:hover .text::after{border-color: transparent transparent transparent white;}
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <img src="../images/testimg.jpg" alt="">
+        <div class="bg"></div>
+        <div class="circle">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+        </div>
+    </div>
+
+    <div style="height: 50px;"></div>
+
+    <div class="box2">
+        <div class="bar"></div>
+        <p class="text">Platform Business</p>
+    </div>
+</body>
+</html>
