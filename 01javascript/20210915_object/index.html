@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box3{
+            width: 15px;height: 15px;display: inline-block;
+            border-radius: 50px;background: grey;
+        }
+    </style>
+</head>
+<body>
+    The name is <span class="box1">none</span><br>
+    The speed is <span class="box2">0 km/h</span><br>
+    The colour is <span class="box3" style=></span><br>
+
+    <button onclick="data()">No.1</button>
+    <script>
+        const city = ["Sydney","Melbourne","Canberra","Brisbane"];
+        const car = {
+            name:"Sonata",
+            speed:100,
+            colour:"black",
+            start:function(){
+                //return car.speed+10;
+                return this.speed+100;
+            }
+        }
+        // document.write(car.speed);
+        // document.write(car.start())
+
+        function data(){
+            document.getElementsByClassName("box1")[0].innerHTML = car.name;
+            document.getElementsByClassName("box2")[0].innerHTML = car.speed;
+            document.querySelector(".box3").style.background = car.colour;
+        }
+        data
+    </script>
+</body>
+</html>

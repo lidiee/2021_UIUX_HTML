@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // const name = "Lydia Han"
+        // const city = ["Sydney", "Melbourne", "Brisbane", "Canberra"]
+        // const han = [100, 70, 60, 80, 80, 90]
+        // document.write(city[0] + "<br>");
+        // document.write(city[1] + "<br>");
+        // document.write(city[3].length)
+
+        // for(let i=0; i<city.length;i++){
+        //     // document.write(city[i] + "<br>")
+        //     document.write(`name${i+1} : ${city[i]} <br>`)
+        // }
+
+        // let sum=0;
+        // for(let i=0;i<han.length;i++){
+        //     sum=sum + han[i];
+        // }
+        // document.write(sum / han.length)
+
+        
+    </script>
+</head>
+<body>
+    Name : <span class="name"></span> <br>
+    English : <span class="sub01">0</span>. <br>
+    Math : <span class="sub02">0</span>. <br>
+    Chemist : <span class="sub03">0</span>. <br>
+    Physics : <span class="sub04">0</span>. <br>
+    Social : <span class="sub05">0</span>. <br>
+    Music : <span class="sub06">0</span>. <br>
+    SUM : <span class="sum">0</span>. <br>
+    AVR : <span class="average">0</span>.
+    <!-- <script>
+        document.getElementById("sub01").innerHTML = han[0];
+        document.getElementById("sub02").innerHTML = han[1];
+        document.getElementById("sub03").innerHTML = han[2];
+        document.getElementById("sub04").innerHTML = han[3];
+        document.getElementById("sub05").innerHTML = han[4];
+        document.getElementById("sub06").innerHTML = han[5];
+        document.getElementById("sum").innerHTML = sum;
+        document.getElementById("average").innerHTML = sum/han.length;
+    </script> -->
+
+    <script>
+        const memb = ["Lydia", 100, 90, 100, 70, 70, 80];
+        let sum;
+        let average;
+        document.getElementsByClassName("name")[0].innerHTML = memb[0];
+        sum = memb[1] + memb[2] + memb[3] + memb[4] + memb[5] + memb[6];
+        average = sum / (memb.length - 1);
+
+        document.getElementsByClassName("sub01")[0].innerHTML = memb[1];
+        document.getElementsByClassName("sub02")[0].innerHTML = memb[2];
+        document.getElementsByClassName("sub03")[0].innerHTML = memb[3];
+        document.getElementsByClassName("sub04")[0].innerHTML = memb[4];
+        document.getElementsByClassName("sub05")[0].innerHTML = memb[5];
+        document.getElementsByClassName("sub06")[0].innerHTML = memb[6];
+        document.getElementsByClassName("sum")[0].innerHTML = sum;
+        document.getElementsByClassName("average")[0].innerHTML = average;
+
+        const spanTag = document.getElementsByTagName("span");
+        // spanTag[0].style.color = "lightcoral"
+        
+        for(let i=0; i<spanTag.length;i++){
+            spanTag[i].style.color = "lightcoral"
+        }
+    </script>
+</body>
+</html>

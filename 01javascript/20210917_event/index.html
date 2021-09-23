@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box span{color: blueviolet;}
+    </style>
+</head>
+<body>
+    <div class="box">
+        Lorem, ipsum dolor sit amet <span>consectetur</span> adipisicing elit. Provident consequatur nulla quas <span>itaque</span>, velit nisi ducimus, nostrum perferendis at <span>reiciendis</span> soluta optio impedit aliquam animi. <span>Quasi</span> quidem maiores possimus laborum.
+    </div>
+    <button class="btn">Click</button>
+    <script>
+        const btn = document.getElementsByClassName("btn");
+        const box = document.getElementsByClassName("box");
+
+        // btn[0].onclick = onBox;
+        // function onBox(){
+        //     box[0].style.color = "orchid"
+        // }
+        // $(".btn").click(function(){
+        //     $(".box").css("color","blanchedalmond")
+        // })
+        // btn[0].addEventListener("click",onbox);
+        // function onBox(){}
+        // btn[0].addEventListener("click",function(){
+        //     box[0].style.color = "darkblue"
+        //     box[0].style.FontSize = "20px"
+        // });
+        const span = document.getElementsByTagName("span");
+        const spansel = document.querySelectorAll(".box span")
+        btn[0].addEventListener("click",function(){
+            for(let i=0;i<spansel.length;i++){
+                spansel[i].style.color = darkblue;
+            }
+        })
+
+        
+
+    </script>
+</body>
+</html>

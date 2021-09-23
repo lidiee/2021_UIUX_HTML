@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{background: lemonchiffon;}
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <button onclick="printarray()">submit</button>
+    <script>
+        const city1 = ["Brisbane", "Adelaide"];
+        const city = new Array("Sydney", 'Melbourne', "Canberra");
+
+        function printarray(){
+            let print="";
+            for(let i=0;i<city.length;i++){
+                //document.write(city[i])
+                print = print + city[i];
+            }
+            //document.write(print)
+            document.getElementsByClassName("box")[0].innerHTML = print;
+        }
+        //printarray()
+
+        
+    </script>
+
+    <!-- <div class="box">
+
+    </div> -->
+</body>
+</html>

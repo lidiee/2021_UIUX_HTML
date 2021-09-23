@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/jquery.bxslider.css">
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/jquery.bxslider.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".slider").bxSlider()
+        });
+    </script>
+    <style>
+        .slider img{width: 100%;}
+        .gnb{width: 100%;margin: 0 auto;
+            background:linear-gradient(120deg, #DAE2F8, #D6A4A4);
+            position: relative;z-index: 1;
+        }
+        .gnb>ul{width: 1000px; margin: 0 auto;}
+        .gnb>ul>li{float: left; width: calc(100% / 5);}
+        .gnb>ul>li:hover{background: lavenderblush;}
+        .gnb>ul>li:hover .subwrap{display: block}
+        .gnb>ul>li>a{
+            display: block;text-align: center;
+            line-height: 40px; color: white;
+            font-weight: bold;
+            position: relative;z-index: 1;
+        }
+        .gnb>ul>li:hover .submenu{display: block;}
+        .gnb>ul>li a:hover{color: slategrey;}
+        .submenu{
+            position: absolute; background: lavenderblush;
+            z-index: 1;
+            display: none;
+        }
+        .submenu li{float: left; padding: 5px 10px;}
+        .gnb>ul>li:nth-child(2) .submenu{
+            left:calc(50% - 330px);
+            _display: block;
+        }
+        .gnb>ul>li:nth-child(3) .submenu{
+            left:50%;transform: translateX(-50%);
+            _display: block;
+        }
+        .gnb>ul>li:nth-child(4) .submenu{
+            left:calc(50% + 55px);
+            _display: block;
+        }
+        .gnb>ul>li:nth-child(5) .submenu{
+            left:calc(50% + 135px);
+            _display: block;
+        }
+        .bar{
+            width: 100%; height: 31px;
+            background: lavenderblush; display: none;
+        }
+        .menuwrap:hover .bar{display: block;}
+    </style>
+</head>
+<body>
+    <div class="menuwrap">
+        <nav class="gnb">
+            <ul class="clearfix">
+                <li>
+                    <a href="#">MENU</a>
+                    <div class="subwrap">
+                        <ul class="submenu clearfix">
+                            <li><a href="#">SUB01_01</a></li>
+                            <li><a href="#">SUB01_02</a></li>
+                            <li><a href="#">SUB01_03</a></li>
+                            <li><a href="#">SUB01_04</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">MENU</a>
+                    <div class="subwrap">
+                        <ul class="submenu clearfix">
+                            <li><a href="#">SUB02_01</a></li>
+                            <li><a href="#">SUB02_02</a></li>
+                            <li><a href="#">SUB02_03</a></li>
+                            <li><a href="#">SUB02_04</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">MENU</a>
+                    <div class="subwrap">
+                        <ul class="submenu clearfix">
+                            <li><a href="#">SUB03_01</a></li>
+                            <li><a href="#">SUB03_02</a></li>
+                            <li><a href="#">SUB03_03</a></li>
+                            <li><a href="#">SUB03_04</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">MENU</a>
+                    <div class="subwrap">
+                        <ul class="submenu clearfix">
+                            <li><a href="#">SUB04_01</a></li>
+                            <li><a href="#">SUB04_02</a></li>
+                            <li><a href="#">SUB04_03</a></li>
+                            <li><a href="#">SUB04_04</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">MENU</a>
+                    <div class="subwrap">
+                        <ul class="submenu clearfix">
+                            <li><a href="#">SUB05_01</a></li>
+                            <li><a href="#">SUB05_02</a></li>
+                            <li><a href="#">SUB05_03</a></li>
+                            <li><a href="#">SUB05_04</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div class="bar"></div>
+    </div>
+    <div class="visual">
+        <ul class="slider">
+            <li><img src="../images/pc01.jpg" alt=""></li>
+            <li><img src="../images/pc02.jpg" alt=""></li>
+            <li><img src="../images/pc03.jpg" alt=""></li>
+        </ul>
+    </div>
+</body>
+</html>

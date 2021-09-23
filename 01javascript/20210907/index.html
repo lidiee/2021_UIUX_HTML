@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+</head>
+<body>
+    <script>
+        var english = 40;
+        var math = 80;
+
+        if(english == 40){
+            console.log("English score is 40");
+            document.write("<div class='box'>Hello. Your English score is " + english + ".</div>")
+        }
+
+        if(english > 50){
+            document.write("Your English score is more than 50. true")
+        }else{
+            document.write("Your English score is less than 50. false <br>")
+        }
+
+        let age = 23;
+        const gender = "female";
+        let result;
+
+        if(age >= 19){
+            result = "adult";
+            if(gender == "male"){
+                result = "male-adult"
+            }else{
+                result = "female-adult"
+            }
+        }else{
+            result = "minor";
+            if(gender == "male"){
+                result = "male-minor"
+            }else{
+                result = "female-minor"
+            }
+        }
+
+
+        document.write(result);
+
+        // function docPrint(doc){
+        //     document.write(doc)
+        // }
+        // docPrint("Do Not Print");
+    </script>
+</body>
+</html>

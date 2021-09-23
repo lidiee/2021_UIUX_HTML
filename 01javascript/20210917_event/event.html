@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;height: 100px;
+            background-color: blanchedalmond;
+            position: relative; left: -100%;
+            transition: 300ms;
+        }
+    </style>
+</head>
+<body>
+    <div id="text" class="text">mouse</div>
+    <p id="p" class="p">mouseover</p>
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+
+    <script>
+        // document.getElementsByTagName("p")[0].onmouseover = function(){
+        //     console.log("hi :-D");
+        //     document.getElementsByTagName("p")[0].style.background = "lavenderblush"
+        // }
+
+
+        // const pid = document.getElementById("p");
+        // pid.onmouseover = function(){
+        //     pid.style.background = "lavender"
+        //     pid.style.color = "slategrey"
+        // }
+        // pid.onmouseout = function(){
+        //     pid.style.background = "initial"
+        //     pid.style.color = "initial"
+        // }
+
+
+        // const pclass = document.getElementsByClassName("p");
+        // pclass[0].onmouseover = function(){
+        //     pclass[0].style.background = "lightpink"
+        // }
+        // pclass[0].onmouseout = function(){
+        //     pclass[0].style.background = "initial"
+        // }
+
+
+        const psel = document.querySelector(".p");
+        const divtext = document.querySelectorAll(".text")
+        // const divbox = document.querySelector(".box")
+        const divbox = document.querySelectorAll(".box")
+
+        psel.onmouseover = over;
+        psel.onmouseout = out;
+
+        function over(){
+            // psel.style.border = "1px solid #000"
+            psel.style.borderColor = "#000"
+            psel.style.borderStyle = "solid"
+            psel.style.borderWidth = "1px"
+            psel.style.backgroundColor = "pink"
+            // psel.style.padding = "20px"
+            divtext[0].innerHTML = "over"
+
+            for(let i=0;i<divbox.length;i++){
+                divbox[i].style.left = 0
+                // divbox[i].style.transitionDelay = "0."+i+"s"
+                divbox[i].style.transitionDelay = `0.${i}s`
+            }
+            // divbox[0].style.left = 0
+            // divbox[1].style.left = 0
+            // divbox[1].style.background = "beige"
+        };
+        function out(){
+            psel.style.border = "initial"
+            psel.style.padding = "initial"
+            psel.style.backgroundColor = "initial"
+            divtext[0].innerHTML = "out"
+
+            for(let i=0;i<divbox.length;i++){
+                divbox[i].style.left = "-100%"
+            }
+            // divbox[0].style.left = "-100%"
+            // divbox[1].style.left = "-100%"
+        }
+    </script>
+</body>
+</html>

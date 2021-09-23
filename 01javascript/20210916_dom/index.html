@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="first" class="box"
+    style="color:cornflowerblue;background: cornsilk;"
+    onclick="this.style.color='teal'">
+        This is a <span style="color:darkblue">sentence</span>.
+    </p>
+    <button onclick="change()">Change Style</button>
+    <input type="button" value="style">
+    <a href="#" >Change Style</a>
+    <div>Change</div>
+    <button onclick="init()">Reset</button>
+    <script>
+        document.getElementById("first").style.color = "slategrey";
+        // const pf = document.getElementById("first");
+        // const pf = document.querySelector("#first");
+        // const pf = document.getElementsByClassName("box")[0];
+        // const pf = document.getElementsByTagName("p")[0];
+        // const pf = document.querySelector(".box");
+        // pf.style.background = "white"
+
+        const pf = document.querySelector("#first");
+        const ps = document.querySelector("#first span");
+        const sbtn = document.querySelector(".btn")
+
+        function change(){
+            pf.style.color = "black"
+            pf.style.fontSize = "20px"
+            ps.style.display = "none"
+            document.querySelector("body").style.background = "black"
+            sbtn.style.display = "none"
+        }
+        function init(){
+            document.querySelector("body").style.background = "initial";
+            pf.style.color = "darkblue"
+            pf.style.fontSize = "initial"
+            ps.style.display = "initial"
+            sbtn.style.display = "initial"
+
+        }
+    </script>
+</body>
+</html>

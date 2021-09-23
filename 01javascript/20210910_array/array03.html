@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const printarray = new Array("sydney", "melbourne", "brisbane", "canberra");
+        function print(){
+            var sum = "";
+            for(let i=0;i<printarray.length;i++){
+                sum = sum + printarray[i]
+            }
+           //document.write(sum);
+           //document.getElementsByClassName("box")[0].innerHTML = sum;
+           //document.querySelector(".box").innerHTML = sum;
+
+           const boxDiv = document.getElementsByClassName("box");
+           for (let i=0;i<boxDiv.length;i++){
+               console.log(i);
+               boxDiv[i].innerHTML = sum;
+           }
+        }
+        //print()
+    </script>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <button onclick="print()">city</button>
+
+    <script>
+        const arrdata = [];
+        let sum = 0;
+        for(let i=0;i<=99;i++){
+            arrdata[i] = i + 1;
+        }
+
+        for(let i=0;i<arrdata.length;i++){
+            document.write(arrdata[i]+" ")
+        }
+
+        for(let i=0;i<arrdata.length;i++){
+            sum = sum + arrdata[i];
+            sum += arrdata[i]
+        }
+
+        document.write(sum);
+
+        let num = new Number();
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <style>
+        .table li{float: left;}
+    </style>
+</head>
+<body>
+    <script>
+        const memb = ["Lydia", "Chris", "Sky"]
+        const Eng = [80,100,90];
+        const Kor = [90,70,90];
+
+        for(let i=0;i<memb.length;i++){
+            // document.write(memb[i] + "<br>")
+            document.write(`<ul class="table clearfix"><li>${memb[i]}</li><li>${Kor[i]}</li><li>${Eng[i]}</li></ul>`)
+        }
+
+
+        const memb1 = [
+            {name:"Lydia",Kor:90,Eng:80},
+            {name:"Chris",Kor:70,Eng:100},
+            {name:"Sky",Kor:90,Eng:90}
+        ]
+
+        let membt = "";
+
+        for(let i=0;i<memb1.length;i++){
+            // membt = membt + memb1[i].name;
+            membt += `
+            <ul class="table clearfix">
+                <li>${memb1[i].name}</li>
+                <li>${memb1[i].Kor}</li>
+                <li>${memb1[i].Eng}</li>
+                </ul>`;
+        }
+        document.write(membt)
+    </script>
+</body>
+</html>
