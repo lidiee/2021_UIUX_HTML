@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // $("p").hide()
+            // $("p").eq(0).hide().show();
+            $("p").eq(0).css("background-color","lavenderblush");
+            let pbg = $("p").eq(0).css("background-color")
+            console.log(pbg)
+            console.log($("p").length)
+
+            $(".btn").on("click",function(){
+                $("p").eq(1).css({
+                    "background":"lavender",
+                    "border":"1px solid slategrey",
+                    "position":"relative",
+                    "left":"20px"
+                })
+            });
+
+            $(".btn1").click(function(){
+                $("p").eq(1).css()
+            })
+        });
+    </script>
+</head>
+<body>
+    <button class="btn">CHANGE</button>
+    <button class="btn1">CLEAR</button>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed repudiandae soluta dicta aspernatur animi nisi nostrum delectus porro iusto, magnam consequatur obcaecati unde quibusdam tempora accusantium minus culpa nihil hic?</p>
+    <p>Velit amet laborum quasi reiciendis sit. Consectetur ab velit porro consequatur debitis tempora nobis, nihil molestiae eligendi id sapiente commodi ullam optio laboriosam dignissimos voluptatem veniam soluta harum pariatur nulla!</p>
+    <p>Qui ullam ipsa ad dolor nesciunt. Non possimus sapiente velit eius perspiciatis eos vero minima explicabo omnis nihil repudiandae molestias in, sit tempora dicta eaque deserunt esse dolorum soluta. Earum.</p>
+    <script>
+        // for(let i=0;i<4;i++){
+        //     document.getElementsByTagName("p")[i].style.display = "none"
+        // }
+    </script>
+</body>
+</html>

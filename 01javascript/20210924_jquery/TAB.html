@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <style>
+        .tab li{float: left; padding: 10px 20px;}
+        .tab li.on{background: lavenderblush;}
+        .con div{display: none;}
+        .con div:first-child{display: block;}
+    </style>
+</head>
+<body>
+    <ul class="tab clearfix">
+        <li class="on">menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+    </ul>
+
+    <div class="con">
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ducimus ad enim repellat quas doloribus sed architecto numquam ut. Quisquam quasi fuga ex inventore saepe harum nemo placeat delectus quis?</div>
+        <div>Totam similique deleniti quia. Quas impedit eaque consectetur velit nulla, sit sint officia perferendis maxime voluptatum corrupti porro, voluptates deleniti architecto odio alias, quos pariatur. Non deserunt corrupti ullam? Iusto.</div>
+        <div>Deleniti quia sunt vel cupiditate esse aliquid, mollitia incidunt omnis sequi ipsum nisi odio? Deleniti qui maiores ab iste commodi sunt quas suscipit laboriosam eos maxime? Itaque vero adipisci consequatur.</div>
+        <div>Recusandae at ex aliquam laborum rem rerum voluptate. Nemo numquam repudiandae est a nostrum veritatis laborum aliquid minus expedita ipsum maiores nesciunt quae quia officia tempora enim unde, neque laboriosam?</div>
+    </div>
+    <script>
+        // $("ul>li").eq(0).click(function(){
+        //     $("ul>li").removeClass();
+        //     $("ul>li").eq(0).addClass("on");
+        // })
+        // $("ul>li").eq(1).click(function(){
+        //     $("ul>li").removeClass();
+        //     $("ul>li").eq(1).addClass("on");
+        // })
+        // $("ul>li").eq(2).click(function(){
+        //     $("ul>li").removeClass();
+        //     $("ul>li").eq(2).addClass("on");
+        // })
+        // $("ul>li").eq(3).click(function(){
+        //     $("ul>li").removeClass();
+        //     $("ul>li").eq(3).addClass("on");
+        // })
+
+
+        // for(let i=0;i<$("ul>li").length;i++){
+        //    $("ul>li").eq(i).click(function(){
+        //        $("ul>li").removeClass();
+        //        $("ul>li").eq(i).addClass("on")
+        //    })
+        // }
+
+
+        $("ul>li").click(function(){
+
+            let num = $(this).index();
+            console.log($(this).index());
+            $("ul>li").removeClass();
+            $(this).addClass("on")
+            
+            $(".con>div").hide();
+            $(".con>div").eq(num).fadeIn()
+        })
+    </script>
+</body>
+</html>
