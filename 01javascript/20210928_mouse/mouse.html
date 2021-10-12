@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero consequatur sint sed minima dolorum harum commodi odit quam. Quibusdam, placeat tenetur at est aspernatur sapiente laborum error dignissimos maxime non praesentium aperiam, minima ut, repellendus provident numquam hic officia. Magni, rem, nihil, neque labore cumque facilis iste repudiandae nulla quaerat perferendis dicta harum porro odit fugiat? Molestiae animi vel distinctio dicta est asperiores amet. Incidunt neque excepturi labore doloribus itaque vel aperiam ea, magni, laborum molestias repellendus porro reprehenderit! Laboriosam corporis sed soluta at asperiores unde repudiandae repellat odio beatae. Atque adipisci quis earum vitae laboriosam hic pariatur incidunt eligendi.
+    <img src="../images/testimg.jpg" alt="" onmouseover="where(event)">
+    <div class="info"></div>
+
+    <script>
+        const info = document.querySelector(".info");
+        function where(e){
+            let text = "";
+            text+= e.clientX + "," + e.clientY;
+            info.innerHTML = text;
+        }
+    </script>
+</body>
+</html>

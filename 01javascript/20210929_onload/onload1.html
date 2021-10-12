@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <select name="" id="sel" onchange="changeImage()">
+            <option value="../images/apple.png">Apple</option>
+            <option value="../images/banana.png">Banana</option>
+            <option value="../images/car.png">Car</option>
+        </select>
+    </form>
+
+    <img src="../images/apple.png" alt="" class="mi">
+
+    <script>
+        function changeImage(){
+            const sel = document.querySelector('#sel');
+            let img = document.querySelector(".mi")
+            let index = sel.selectedIndex;
+
+            console.log(index)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery</title>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <style>
+        .box{background: lemonchiffon;}
+    </style>
+    <script>
+        //hide p tag by click the button
+        $(document).ready(function(){
+
+            const tHtml = "Lydia";
+            $(".btn").click(function(){
+                $("p").hide();
+                $("body").append(`<div class="box">${tHtml}</div>`);
+
+            });
+
+
+            
+            $("body").prepend("nod1")
+        });
+    </script>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <button class="btn">Click</button>
+
+    <script>
+        // const btn = document.querySelector(".btn");
+        // const pTag = document.querySelector("p");
+        // $(".btn")[0].onclick = function(){
+        //     pTag.style.display = "none";
+        // };
+    </script>
+
+
+
+</body>
+</html>

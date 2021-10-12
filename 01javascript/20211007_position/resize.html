@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <style>
+        *{margin: 0;padding: 0;}
+        html,body{height: 100vh;}
+    </style>
+    <script>
+        $(document).ready(function(){
+            // $("body").css("background-color","blanchedalmond").css("padding",100);
+            
+            
+            let bwd = $("body").width();
+            
+            
+            function rsz(){
+                if(bwd > 700){
+                    $("body").css({
+                        "background":"azure",
+                        "border":"1px solid #000"
+                    });
+                }else{
+                    $("body").css({
+                        "background":"blanchedalmond",
+                        "border":"1px solid #000"
+                    })
+                }
+            }
+            rsz();
+
+
+            $(window).resize(function(){
+                let bwd = $("body").width();
+                console.log(`size : ${bwd}px`);
+                rsz();
+            })
+        })
+    </script>
+</head>
+<body>
+    HI:-)
+</body>
+</html>

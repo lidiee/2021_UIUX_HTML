@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script>
+        // window.onload = function(){
+        //     alert("load")
+        // }
+
+        function go(){
+            alert("Loading")
+        }
+    </script>
+</head>
+<body onload="go()">
+    <button class="btn">BUTTON</button>
+    <button class="btn1">BUTTON</button>
+    <script>
+        // document.querySelector(".btn").onclick = function(){
+        //     alert("DO NOT CLICK")
+        // }
+        document.querySelector(".btn").onclick = click;
+        function click(){
+            alert("Don't click")
+        }
+        // document.querySelector(".btn1").addEventListener("click",function(){
+        //     alert("Do Not Click")
+        // });
+        document.querySelector(".btn1").addEventListener("click",click1);
+        function click1(){
+            alert("DO NOT CLICK")
+        }
+    </script>
+</body>
+</html>
