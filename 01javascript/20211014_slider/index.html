@@ -15,7 +15,7 @@
         }
         .wrapper img{width: 100%}
         .wrapper ul{width: 500px;height: 200px;position: relative;}
-        .wrapper li{position: absolute;left: 100%;width: 100%;transition: 1s;}
+        .wrapper li{position: absolute;left: 100%;width: 100%;}
         .wrapper li:first-child{left: 0;}
     </style>
     <script>
@@ -31,18 +31,16 @@
             setInterval(slider,3000);
             let current=0;
             function slider(){
-                console.log(`${current}`)
-                $(".wrapper li").eq(current).css("left",0)
-                $(".wrapper li").eq(current).css("left","-100%")
-                //$(".wrapper li").eq(current).stop().animate({"left":"-100%"},1000);
+                // console.log(`${current}`)
 
+                $(".wrapper li").eq(current).css("left",0).stop().animate({"left":"-100%"});
+                
                 current++;
                 if(current==5){current=0}
 
-                console.log(`next:${current}`)
-                $(".wrapper li").eq(current).css("left","100%")
-                $(".wrapper li").eq(current).css("left",0)
-                //$(".wrapper li").eq(current).stop().animate({"left":0},1000)
+                $(".wrapper li").eq(current).css("left","100%").stop().animate({"left":0})
+
+                // console.log(`next:${current}`)
             }
         });
     </script>
