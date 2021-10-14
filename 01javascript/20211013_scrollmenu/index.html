@@ -77,7 +77,23 @@
                 let st = target.offset().top;
 
                 console.log(st)
-                $("html,body").animate({scrollTop})
+                $("html,body").animate({scrollTop:st},300)
+            })
+
+            $(window).scroll(function(){
+                let scrollY = $(window).scrollTop();
+
+                // for(let i=0;i<$(".scene").length;i++){
+                //     if(scrollY >+ $(".scene").eq(1).offset().top){
+                //         $(".menu">a).removeClass().eq(i).addClass("on");
+                //     }
+                // }
+
+                $(".scene").each(function(index){
+                    if(scrollY >= $(this).offset().top){
+                        $(".menu>a").removeClass().eq(index).addClass("on")
+                    }
+                });
             })
         })
     </script>
