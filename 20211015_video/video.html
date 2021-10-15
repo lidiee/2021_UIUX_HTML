@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        body{height: 500vh;}
+        .sample{width: 100%;position: fixed;}
+        .st{
+            position: fixed;
+            background-color: aliceblue;
+            width: 100%;height: 10px;
+        }
+        .st .bar{
+            width: 0; height: 10px;background-color: lemonchiffon;
+        }
+    </style>
+</head>
+<body>
+    <video src="video/s_intro_s.mp4" class="sample" muted></video>
+    <div class="st">
+        <div class="bar"></div>
+    </div>
+
+    <script>
+        const ve = document.querySelector(".sample");
+        const bar = document.querySelector(".bar")
+
+        window.addEventListener("scroll",function(){
+            let scollY = window.pageYOffset;
+            const bh = document.body.offsetHeight;
+            let wh = window.innerHeight;
+            let sh = bh - wh;
+
+            let progress = scrollY / sh;
+
+
+
+            console.log(progress)
+            // ve.style.opacity = progress;
+            bar.style.width = progress * 100 + "%"
+            ve.currentTime = ve.duration * progress;
+        })
+    </script>
+</body>
+</html>

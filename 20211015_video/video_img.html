@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        body{height: 400vh;}
+        .sampleimg{
+            width: 100%;position: fixed;
+            top: 0;left: 0;
+        }
+        .view{
+            position: relative;width: 100%;text-align: center;color: white;
+            padding-top: 50vh;
+        }
+        .mb100{margin-bottom: 100vh;}
+    </style>
+</head>
+<body>
+    <img src="images/small/s_intro_s_1000.jpg" alt="" class="sampleimg">
+    <div class="view">
+        <h1 class="mb100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, libero!</h1>
+        <h1 class="mb100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, libero!</h1>
+        <h1 class="mb100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, libero!</h1>
+    
+    </div>
+
+    <script>
+        const si = document.querySelector(".sampleimg")
+        const vi = [];
+        let total = 122;
+
+        for(let i=0;i<total;i++){
+            let ie = "images/small/s_intro_s_" + (1000 + i) + ".jpg"
+
+            vi.push(ie)
+        }
+
+        window.addEventListener("scroll",function(){
+            let scrollY = window.pageYOffset;
+            let progress = scrollY / (document.body.offsetHeight - window.innerHeight);
+            currentFrame = Math.round((total - 1) * progress);
+            console.log(currentFrame)
+            si.src = vi[currentFrame]
+        })
+    </script>
+</body>
+</html>
