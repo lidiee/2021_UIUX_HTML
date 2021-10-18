@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <style>
+        img{width: 500px;}
+        .wrapper{width: 500px;height: 230px;margin: 0 auto;overflow: hidden;background: aliceblue;}
+        .wrapper ul{width: 500px;height: 200px;position: relative;}
+        .wrapper li{position: absolute;left: 100%;}
+        .wrapper li:first-child{left: 0;}
+    </style>
+
+    <script>
+        $(function(){
+            let current = 0;
+            let overbtn = false;
+
+
+            function nextslider(){
+
+                if(overbtn == false){
+                    overbtn = true;
+                    $(".wrapper li").eq(current).css({left:0}).stop().animate({left:"-100%"},400)
+                    current++;
+                    if(current == 5){current = 0}
+                    $(".wrapper li").eq(current)
+                    .css({left:"100%"})
+                    .stop().animate({left:0},{duration:400,complete:function(){overbtn=false}})
+                }
+            }
+
+            function prevslider(){
+                if(overbtn == false){
+                    overbtn = true;
+                    $(".wrapper li").eq(current).css({left:0}).stop().animate({left:"100%"},400)
+                    current--;
+                    if(current == -1){current = 4}
+                    $(".wrapper li")
+                    .eq(current)
+                    .css({left:"-100%"})
+                    .stop()
+                    .animate({left:0},400,function(){
+                        overbtn=false
+                    })
+                }
+            }
+
+            $(".next").click(function(){
+                nextslider()
+            });
+            $(".prev").click(function(){
+                prevslider()
+            });
+            
+
+            setInterval(function(){
+                $(".next").trigger("click")
+            },3000)
+        })
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <ul>
+            <li><img src="../images/images01.jpg" alt="01"></li>
+            <li><img src="../images/images02.jpg" alt="02"></li>
+            <li><img src="../images/images03.jpg" alt="03"></li>
+            <li><img src="../images/images04.jpg" alt="04"></li>
+            <li><img src="../images/images05.jpg" alt="05"></li>
+        </ul>
+        <div class="btn">
+            <a href="#" class="prev">PREV</a> | <a href="#" class="next">NEXT</a>
+        </div>
+    </div>    
+</body>
+</html>

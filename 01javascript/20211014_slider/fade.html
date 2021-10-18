@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <style>
+        img{width: 500px;}
+        .wrapper{width: 500px;height: 200px;margin: 0 auto;overflow: hidden;}
+        .wrapper ul{width: 500px;height: 200px;position: relative;}
+        .wrapper li{position: absolute;left: 0;opacity: 0;}
+        .wrapper li:first-child{left: 0;opacity: 1;}
+    </style>
+
+    <script>
+        $(function(){
+            let current = 0;
+            let view = 0;
+
+            setInterval(slider,3000);
+            function slider(){
+                current++;
+                if(current == 5){current = 0};
+                $(".wrapper li").eq(current).css({opacity:0,"z-index":view++}).animate({opacity:1},1000)
+            }
+        })
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <ul>
+            <li><img src="../images/images01.jpg" alt="01"></li>
+            <li><img src="../images/images02.jpg" alt="02"></li>
+            <li><img src="../images/images03.jpg" alt="03"></li>
+            <li><img src="../images/images04.jpg" alt="04"></li>
+            <li><img src="../images/images05.jpg" alt="05"></li>
+        </ul>
+    </div>    
+</body>
+</html>
