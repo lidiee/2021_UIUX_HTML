@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;height: 100px;
+            background: #ccc;
+            position: absolute;left: 50%;top: 50%;
+            perspective: 500px;
+        }
+        .innerbox{
+            position: absolute;
+            background: aliceblue;
+            width: 100%;height: 100%;
+            transition: 300ms;
+            transform-origin: 0 0;
+        }
+        .box1:hover .innerbox{transform: translate3d(0,0,-200px);}
+    </style>
+</head>
+<body>
+    <div class="box box1">
+        <div class="innerbox"></div>
+    </div>
+</body>
+</html>

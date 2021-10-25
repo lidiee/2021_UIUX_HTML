@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        body{
+            height: 100vh;
+            background-color: darkgreen; perspective: 1000px;
+            display: flex;justify-content: space-around;align-items: center;
+            background: url(images/background.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        img{display: block;}
+        .card{
+            position: relative;
+            width: 200px;height: 308px;
+            transform-style: preserve-3d;
+            transform: rotateY(180deg);
+            transition: 300ms;
+        }
+        /* .card:hover{transform: rotateY(0deg);} */
+
+        .card.sh{transform: rotateY(0deg);}
+        .card div{
+            position: absolute;width: 100%;height: 100%;
+            border-radius: 10px;overflow: hidden;
+            backface-visibility: hidden;
+            box-shadow: 0 0 20px rgba(0,0,0,0.4);
+        }
+        .back{
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="front">
+            <img src="images/a.jpg" alt="">
+        </div>
+        <div class="back">
+            <img src="images/back.jpg" alt="">
+        </div>
+    </div>
+    <div class="card">
+        <div class="front">
+            <img src="images/q.png" alt="">
+        </div>
+        <div class="back">
+            <img src="images/back.jpg" alt="">
+        </div>
+    </div>
+    <div class="card">
+        <div class="front">
+            <img src="images/10.jpg" alt="">
+        </div>
+        <div class="back">
+            <img src="images/back.jpg" alt="">
+        </div>
+    </div>
+    <div class="card">
+        <div class="front">
+            <img src="images/j.png" alt="">
+        </div>
+        <div class="back">
+            <img src="images/back.jpg" alt="">
+        </div>
+    </div>
+    <div class="card">
+        <div class="front">
+            <img src="images/k.png" alt="">
+        </div>
+        <div class="back">
+            <img src="images/back.jpg" alt="">
+        </div>
+    </div>
+    <script>
+        let card = document.querySelectorAll(".card");
+
+        // card[0].addEventListener("click",function(){
+        //     this.classList.toggle("sh")
+        // })
+
+        // let rotate = true;
+        // card[0].addEventListener("click",function(){
+        //     if(rotate == true){
+        //         this.classList.add("sh")
+        //         rotate = false;
+        //     }else{
+        //         this.classList.remove("sh")
+        //         rotate = true;
+        //     }
+        // })
+        
+        // for(let i=0;i<card.length;i++){
+        //     card[i].addEventListener("click",function(){
+        //         this.classList.toggle("sh")
+        //     })
+        // }
+
+        // card.forEach(function(item,index){
+        //     card[index].addEventListener("click",function(){
+        //         this.classList.toggle("sh")
+        //     })
+        // })
+
+        card.forEach(function(item,i){
+            card[i].addEventListener("mouseover",function(){
+                this.classList.add("sh")
+            });
+            card[i].addEventListener("mouseout",function(){
+                this.classList.remove("sh")
+            });
+        })
+    </script>
+</body>
+</html>
