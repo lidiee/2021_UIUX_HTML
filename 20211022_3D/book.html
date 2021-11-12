@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .content{
+            position: absolute;
+            top: 50%;left: 50%;
+            transform: translate(-50%,-50%);
+            perspective: 1000px;
+        }
+        .content:hover .book{transform: rotateY(20deg) translateZ(50px); transition: 300ms;}
+        .content:hover .side{transform: rotateY(70deg) translate3d(-90px,0,50px);}
+
+        .side{transform: rotateY(90deg);}
+
+        
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="book">
+            <img src="images/side.png" alt="" class="side">
+            <img src="images/front.png" alt="" class="front">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        body{height: 500vh;background: sienna;}
+        .wrap{
+            width: 100vw; height: 100vh;
+            position: fixed;left: 0;top: 0;
+            perspective: 1000px;
+        }
+        .stage{
+            width: 100vw;height: 100vh;
+            transform-style: preserve-3d;
+        }
+        .house{
+            width: 100vw;height: 100vh;
+            transform-style: preserve-3d;
+            position: relative;
+            transform: translate3d(0,0,-500vw);
+        }
+        .wall{
+            width: 100vw;height: 100vh;
+            /* background: rgba(255,255,255,0.3); */
+            position: absolute;
+            display: flex;justify-content: center;align-items: center;
+            font-size: 8vw;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        .wall.wall_0{
+            background: rgba(255,255,255,0.1);
+        }
+        .wall.wall_0.left{
+            width: 1000vw;
+            transform: rotateY(90deg) translateZ(-500vw);
+        }
+        .wall.wall_0.right{
+            width: 1000vw;
+            transform: rotateY(90deg) translateZ(-400vw);
+        }
+        .wall.wall_s{
+            transform: translate3d(0,0,500vw);
+            background: grey;
+        }
+        .wall.wall_1{
+            transform: translate3d(0,0,190vw);
+            background-image: url(images/parallax8.png);
+        }
+        .wall.wall_2{
+            transform: translate3d(0,0,160vw);
+            background-image: url(images/parallax7.png);
+        }
+        .wall.wall_3{
+            transform: translate3d(0,0,130vw);
+            background-image: url(images/parallax6.png);
+        }
+        .wall.wall_4{
+            transform: translate3d(0,0,100vw);
+            background-image: url(images/parallax5.png);
+        }
+        
+        .wall.wall_6{
+            transform: translate3d(0,0,-100vw);
+            background-image: url(images/parallax4.png);
+        }
+        .wall.wall_7{
+            transform: translate3d(0,0,-130vw);
+            background-image: url(images/parallax3.png);
+        }
+        .wall.wall_8{
+            transform: translate3d(0,0,-160vw);
+            background-image: url(images/parallax2.png);
+        }
+        .wall.wall_9{
+            transform: translate3d(0,0,-190vw);
+            background-image: url(images/parallax1.png);
+        }
+        .wall.wall_10{
+            transform: translate3d(0,0,-500vw);
+            background-image: url(images/parallax0.png);
+        }
+
+        .view{position: fixed;}
+    </style>
+</head>
+<body>
+    <div class="view">
+        scroll ratio <span class="scroll">0</span>
+    </div>
+    <div class="wrap">
+        <div class="stage">
+            <div class="house">
+                <div class="wall wall_0 left">LEFT</div>
+                <div class="wall wall_0 right">RIGHT</div>
+                <div class="wall wall_s"></div>
+                <div class="wall wall_1">VIEW1</div>
+                <div class="wall wall_2">VIEW2</div>
+                <div class="wall wall_3">VIEW3</div>
+                <div class="wall wall_4">VIEW4</div>
+                <div class="wall wall_5">VIEW5</div>
+                <div class="wall wall_6">VIEW6</div>
+                <div class="wall wall_7">VIEW7</div>
+                <div class="wall wall_8">VIEW8</div>
+                <div class="wall wall_9">VIEW9</div>
+                <div class="wall wall_10">VIEW10</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        let menuposX = 0
+        let menuposY = 0
+
+
+        window.addEventListener("scroll",function(){
+            let scroll = window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
+            document.querySelector(".scroll").innerHTML = scroll * 1000
+
+            let ratio = scroll * 980 - 500;
+            // document.querySelector(".house").style.transform = "translate3d(0,0,"+ratio+"vw)"
+            document.querySelector(".house").style.transform = `translate3d(0,0,${ratio}vw)`
+        })
+
+        window.addEventListener("mousemove",function(e){
+            console.log(-1 + e.clientX / window.innerWidth * 2)
+            menuposX = -1 + e.clientX / window.innerWidth * 2
+            menuposY = -1 + e.clientY / window.innerHeight * 2
+            document.querySelector(".stage").style.transform = `rotateY(${menuposX*3}deg) rotateX(${menuposY*3}deg)`
+        })
+    </script>
+</body>
+</html>
